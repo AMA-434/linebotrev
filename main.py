@@ -14,7 +14,7 @@ import random
 
 app = Flask(__name__)
 
-#ŠÂ‹«•Ï”æ“¾
+#ç’°å¢ƒå¤‰æ•°å–å¾—
 LINE_CHANNEL_ACCESS_TOKEN = os.environ["LINE_CHANNEL_ACCESS_TOKEN"]
 LINE_CHANNEL_SECRET = os.environ["LINE_CHANNEL_SECRET"]
 
@@ -41,7 +41,7 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    # Šî–{“I‚É‚±‚±‚ÉƒR[ƒh‚ğ‘‚¢‚Ä‚¢‚«‚Ü‚·B
+    # åŸºæœ¬çš„ã«ã“ã“ã«ã‚³ãƒ¼ãƒ‰ã‚’æ›¸ã„ã¦ã„ãã¾ã™ã€‚
     message = event.message.text
     line_bot_api.reply_message(
         event.reply_token,
