@@ -42,10 +42,12 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     # 基本的にここにコードを書いていきます。
+    rkaiji = ["キンキンに冷えてやがるっ……！", "犯罪的だっ……！", "ざわ…ざわ…"]
     message = event.message.text
+    connectedmessage = message + "………………！" + random.choice(rkaiji)
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=message+"……………！"))
+        TextSendMessage(text=connectedmessage))
 
 
 if __name__ == "__main__":
