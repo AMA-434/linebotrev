@@ -14,7 +14,7 @@ import random
 
 app = Flask(__name__)
 
-#ŠÂ‹«•Ï”æ“¾
+#ç’°å¢ƒå¤‰æ•°å–å¾—
 LINE_CHANNEL_ACCESS_TOKEN = os.environ["LINE_CHANNEL_ACCESS_TOKEN"]
 LINE_CHANNEL_SECRET = os.environ["LINE_CHANNEL_SECRET"]
 
@@ -41,10 +41,10 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    # Šî–{“I‚É‚±‚±‚ÉƒR[ƒh‚ğ‘‚¢‚Ä‚¢‚«‚Ü‚·B
+    # åŸºæœ¬çš„ã«ã“ã“ã«ã‚³ãƒ¼ãƒ‰ã‚’æ›¸ã„ã¦ã„ãã¾ã™ã€‚
     message = event.message.text
-    tenkaiji = "ccccccI"
-    randomkaiji = random.choice(["ƒLƒ“ƒLƒ“‚É—â‚¦‚Ä‚â‚ª‚é‚ÁccI", "”Æß“I‚¾‚ÁccI", "‚´‚íc‚´‚íc"])
+    tenkaiji = "â€¦â€¦â€¦â€¦â€¦â€¦ï¼"
+    randomkaiji = random.choice(["ã‚­ãƒ³ã‚­ãƒ³ã«å†·ãˆã¦ã‚„ãŒã‚‹ã£â€¦â€¦ï¼", "çŠ¯ç½ªçš„ã ã£â€¦â€¦ï¼", "ã–ã‚â€¦ã–ã‚â€¦"])
     connectedmessage = message + tenkaiji + randomkaiji
     line_bot_api.reply_message(
         event.reply_token,
